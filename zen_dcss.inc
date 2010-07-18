@@ -1,10 +1,11 @@
 <?php
 
 function zendcss_create_layout_css($info = array(), $default_css = array()) {
+  $layout = dcss('layout');
   $info += array(
-    'width' => dcss('layout-width'),
-    'first' => dcss('layout-region-sidebar-first'),
-    'second' => dcss('layout-region-sidebar-second'),
+    'width' => $layout['width'],
+    'first' =>  $layout['first'],
+    'second' => $layout['second'],
   );
   $first_plus_second = dcss_calc($info['first'], $info['second'], 'add');
   $width_minus_first_second =  dcss_calc($info['width'], $first_plus_second, 'subtract');

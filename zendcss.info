@@ -99,6 +99,19 @@ settings[zen_rebuild_registry]     = 1
 settings[zen_wireframes]           = 0
 
   ; DCSS settings
-settings[dcss][layout-width] = 960px
-settings[dcss][layout-region-sidebar-second] = 200px
-settings[dcss][layout-region-sidebar-first] = 200px
+settings[dcss][layout][width] = 960px
+settings[dcss][layout][first] = 200px
+settings[dcss][layout][second] = 200px
+
+ ; DCSS ui settings
+settings[dcss_ui][layout][type] = group
+settings[dcss_ui][layout][title] = Layout
+settings[dcss_ui][layout][below][width][type] = numeric
+settings[dcss_ui][layout][below][width][title] = Main Layout Width
+settings[dcss_ui][layout][below][width][suffix] = px
+settings[dcss_ui][layout][below][first][type] = numeric
+settings[dcss_ui][layout][below][first][title] = Sidebar First Width
+settings[dcss_ui][layout][below][first][suffix] = px
+settings[dcss_ui][layout][below][second][type] = numeric
+settings[dcss_ui][layout][below][second][title] = Sidebar Second Width
+settings[dcss_ui][layout][below][second][suffix] = px
