@@ -26,7 +26,7 @@ function zendcss_create_layout_css($info = array(), $default_css = array()) {
     array(
       'comment' => 'Content',
       'selectors' => array(
-        '#content',
+        ' #content',
         '.no-sidebars #content',
       ),
       'styles' => array(
@@ -36,6 +36,7 @@ function zendcss_create_layout_css($info = array(), $default_css = array()) {
         'margin-right' => '-' . $info['width'],
         'padding: 0',        
       ),
+      'prepend_selector_spacer' => '',
     ),
     array(
       'selector' => '.sidebar-first #content',
@@ -44,6 +45,7 @@ function zendcss_create_layout_css($info = array(), $default_css = array()) {
         'margin-left' => $info['first'],
         'margin-right' => '-' . $info['width'],      
       ),
+      'prepend_selector_spacer' => '',
     ),
     array(
       'selector' => '.sidebar-second #content',
@@ -52,6 +54,7 @@ function zendcss_create_layout_css($info = array(), $default_css = array()) {
         'margin-left: 0',
         'margin-right' => '-' . $width_minus_second,      
       ),
+      'prepend_selector_spacer' => '',
     ),
     array(
       'selector' => '.two-sidebars #content',
@@ -60,6 +63,7 @@ function zendcss_create_layout_css($info = array(), $default_css = array()) {
         'margin-left' => $info['first'],
         'margin-right' => '-' . $width_minus_second,      
       ),
+      'prepend_selector_spacer' => '',
     ),
     array(
       'comment' => 'First sidebar',
@@ -101,6 +105,7 @@ function zendcss_format($css) {
   $css += array(
     'prepend_selector' => '',
     'comment' => '',
+    'prepend_selector_spacer' => ' ',
   );
   
   // add comments to css file
@@ -113,8 +118,8 @@ function zendcss_format($css) {
   }
   
   // if a prepend selector, add a space to end of it
-  if (!empty($css['prepend_selector'] )) {
-     $css['prepend_selector']  .= ' ';
+  if (!empty($css['prepend_selector'])) {
+     $css['prepend_selector']  .= $css['prepend_selector_spacer'] ;
   }
   // output selectors
   $glue = ",\n" . $css['prepend_selector'];
@@ -123,7 +128,7 @@ function zendcss_format($css) {
     $output .= implode($glue, $css['selectors']);
   }
   else {
-    $output = $css['prepend_selector'] . ' ' . $css['selector'];
+    $output .= $css['prepend_selector'] . $css['selector'];
   }
   $output .= " { \n";
   
