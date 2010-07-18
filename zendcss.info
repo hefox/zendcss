@@ -28,7 +28,7 @@ base theme = zen
 stylesheets[all][]   = css/html-reset.css
 stylesheets[all][]   = css/wireframes.css
 stylesheets[all][]   = css/layout-fixed.css.php
-stylesheets[all][]   = css/page-backgrounds.css
+stylesheets[all][]   = css/page-backgrounds.css.php
 stylesheets[all][]   = css/tabs.css
 stylesheets[all][]   = css/messages.css
 stylesheets[all][]   = css/pages.css
@@ -99,9 +99,36 @@ settings[zen_rebuild_registry]     = 1
 settings[zen_wireframes]           = 0
 
   ; DCSS settings
+  
+  ; layout
 settings[dcss][layout][width] = 960px
 settings[dcss][layout][first] = 200px
 settings[dcss][layout][second] = 200px
+
+  ; Colour
+settings[dcss][colors][body][background] = #FFF
+settings[dcss][colors][body][font]  = #000
+
+settings[dcss][colors][page_wrapper][background] = none
+settings[dcss][colors][page_wrapper][font] = none
+
+settings[dcss][colors][page][background] = none
+settings[dcss][colors][page][font] = none
+
+settings[dcss][colors][header][background] = none
+settings[dcss][colors][header][font] = none
+
+settings[dcss][colors][header_section][font] = none
+settings[dcss][colors][header_section][background] = none
+
+settings[dcss][colors][main][background] = none
+settings[dcss][colors][main][font] = none
+
+settings[dcss][colors][footer][background] = none
+settings[dcss][colors][footer][font] = none
+
+settings[dcss][colors][footer_section][background] = none
+settings[dcss][colors][footer_section][font] = none
 
  ; DCSS ui settings
 settings[dcss_ui][layout][type] = group
@@ -115,3 +142,38 @@ settings[dcss_ui][layout][below][first][suffix] = px
 settings[dcss_ui][layout][below][second][type] = numeric
 settings[dcss_ui][layout][below][second][title] = Sidebar Second Width
 settings[dcss_ui][layout][below][second][suffix] = px
+
+settings[dcss_ui][colors][type] = group
+settings[dcss_ui][colors][title] = Colors
+
+settings[dcss_ui][colors][below][body][type] = group
+settings[dcss_ui][colors][below][body][below][background][type] = color
+settings[dcss_ui][colors][below][body][below][font][type] = color
+
+settings[dcss_ui][colors][below][page_wrapper][type] = group
+settings[dcss_ui][colors][below][page_wrapper][below][background][type] = color
+settings[dcss_ui][colors][below][page_wrapper][below][font][type] = color
+
+settings[dcss_ui][colors][below][page][type] = group
+settings[dcss_ui][colors][below][page][below][background][type] = color
+settings[dcss_ui][colors][below][page][below][font][type] = color
+
+settings[dcss_ui][colors][below][header][type] = group
+settings[dcss_ui][colors][below][header][below][background][type] = color
+settings[dcss_ui][colors][below][header][below][font][type] = color
+
+settings[dcss_ui][colors][below][header_section][type] = group
+settings[dcss_ui][colors][below][header_section][below][background][type] = color
+settings[dcss_ui][colors][below][header_section][below][font][type] = color
+
+settings[dcss_ui][colors][below][main][type] = group
+settings[dcss_ui][colors][below][main][below][background][type] = color
+settings[dcss_ui][colors][below][main][below][font][type] = color
+
+settings[dcss_ui][colors][below][footer][type] = group
+settings[dcss_ui][colors][below][footer][below][background][type] = color
+settings[dcss_ui][colors][below][footer][below][font][type] = color
+
+settings[dcss_ui][colors][below][footer_section][type] = group
+settings[dcss_ui][colors][below][footer_section][below][background][type] = color
+settings[dcss_ui][colors][below][footer_section][below][font][type] = color
