@@ -25,12 +25,12 @@ base theme = zen
   ; You can also override any of Zen's stylesheets or any module's stylesheets,
   ; an /extremely/ useful feature. See the excellent Drupal 6 Theme Guide at
   ; http://drupal.org/node/171209 for more details.
-stylesheets[all][]   = css/html-reset.css
+stylesheets[all][]   = css/html-reset.css.php
 stylesheets[all][]   = css/wireframes.css
 stylesheets[all][]   = css/layout-fixed.css.php
 stylesheets[all][]   = css/page-backgrounds.css.php
 stylesheets[all][]   = css/tabs.css
-stylesheets[all][]   = css/messages.css
+stylesheets[all][]   = css/messages.css.php
 stylesheets[all][]   = css/pages.css
 stylesheets[all][]   = css/block-editing.css
 stylesheets[all][]   = css/blocks.css
@@ -130,6 +130,28 @@ settings[dcss][colors][footer][font] = none
 settings[dcss][colors][footer_section][background] = none
 settings[dcss][colors][footer_section][font] = none
 
+ ; Messages
+
+settings[dcss][messages][use_images] = 1
+settings[dcss][messages][default][color] = #000
+settings[dcss][messages][default][background_color] = #ffc
+settings[dcss][messages][default][border][width] = 2px
+settings[dcss][messages][default][border][style] = solid
+settings[dcss][messages][default][border][color] = #ff7
+
+settings[dcss][messages][warning][border_color] = #fc0
+settings[dcss][messages][warning][background_color] = #ffc
+settings[dcss][messages][warning][color] = #000
+
+settings[dcss][messages][error][border_color] = #c00
+settings[dcss][messages][error][background_color] = #fee
+settings[dcss][messages][error][color] = #900
+
+ ; HTML reset
+settings[dcss][defaults][page_font] = 14px
+settings[dcss][defaults][font_family] = Verdana, Tahoma, "DejaVu Sans", sans-serif
+settings[dcss][defaults][code_font_family] = "Courier New", "DejaVu Sans Mono", monospace
+
  ; DCSS ui settings
 settings[dcss_ui][layout][type] = group
 settings[dcss_ui][layout][title] = Layout
@@ -143,6 +165,7 @@ settings[dcss_ui][layout][below][second][type] = numeric
 settings[dcss_ui][layout][below][second][title] = Sidebar Second Width
 settings[dcss_ui][layout][below][second][suffix] = px
 
+ ; DCSS color settings
 settings[dcss_ui][colors][type] = group
 settings[dcss_ui][colors][title] = Colors
 
@@ -177,3 +200,41 @@ settings[dcss_ui][colors][below][footer][below][font][type] = color
 settings[dcss_ui][colors][below][footer_section][type] = group
 settings[dcss_ui][colors][below][footer_section][below][background][type] = color
 settings[dcss_ui][colors][below][footer_section][below][font][type] = color
+
+ ; DCSS ui messages
+settings[dcss_ui][messages][type] = group
+
+settings[dcss_ui][messages][below][use_images][type] = boolean
+settings[dcss_ui][messages][below][use_images][title] = Display status indicator images
+ 
+settings[dcss_ui][messages][below][default][type] = group
+settings[dcss_ui][messages][below][default][below][color][type] = color
+settings[dcss_ui][messages][below][default][below][background_color][type] = color
+
+settings[dcss_ui][messages][below][default][below][border][type] = group
+settings[dcss_ui][messages][below][default][below][border][below][width][type] = numeric
+settings[dcss_ui][messages][below][default][below][border][below][style][type] = option
+settings[dcss_ui][messages][below][default][below][border][below][style][option_type] = border
+settings[dcss_ui][messages][below][default][below][border][below][color][type] = color
+
+settings[dcss_ui][messages][below][warning][type] = group
+settings[dcss_ui][messages][below][warning][below][color][type] = color
+settings[dcss_ui][messages][below][warning][below][background_color][type] = color
+settings[dcss_ui][messages][below][warning][below][border_color][type] = color
+
+settings[dcss_ui][messages][below][error][type] = group
+settings[dcss_ui][messages][below][error][below][color][type] = color
+settings[dcss_ui][messages][below][error][below][background_color][type] = color
+settings[dcss_ui][messages][below][error][below][border_color][type] = color
+
+ ; HTML reset
+settings[dcss_ui][defaults][type] = group
+
+settings[dcss_ui][defaults][below][page_font][type] = numeric
+settings[dcss_ui][defaults][below][page_font][title] = Main Page content Font
+settings[dcss_ui][defaults][below][page_font][suffix] = px
+
+settings[dcss_ui][defaults][below][font_family][type] = option
+settings[dcss_ui][defaults][below][font_family][option_type] = font_family
+settings[dcss_ui][defaults][below][code_font_family][type] = option
+settings[dcss_ui][defaults][below][code_font_family][option_type] = font_family

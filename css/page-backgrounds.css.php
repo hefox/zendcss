@@ -42,7 +42,7 @@
         }
       }
       if ($css['styles']) {
-        echo zendcss_format($css);
+        echo theme('dcss_css', $css);
       }
     }
   }

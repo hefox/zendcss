@@ -93,53 +93,7 @@ function zendcss_create_layout_css($info = array(), $default_css = array()) {
   $output = '';
   foreach($csses as $css) {
     $css += $default_css;
-    $output .= zendcss_format($css);
+    $output .= theme('dcss_css', $css);
   }
   return $output;
-}
-
-/**
- * Formats css based on array
- */
-function zendcss_format($css) {
-  // defaults
-  $css += array(
-    'prepend_selector' => '',
-    'comment' => '',
-    'prepend_selector_spacer' => ' ',
-  );
-  
-  // add comments to css file
-  $output = "\n";
-  if (!empty($css['comment'])) {
-    if (!is_array($css['comment'])) {
-      $css['comment'] = array($css['comment']);
-    }
-    $output .= "\n/**\n * " .  implode("\n * ", $css['comment']) . "\n */\n";
-  }
-  
-  // if a prepend selector, add a space to end of it
-  if (!empty($css['prepend_selector'])) {
-     $css['prepend_selector']  .= $css['prepend_selector_spacer'] ;
-  }
-  // output selectors
-  $glue = ",\n" . $css['prepend_selector'];
-  if (is_array($css['selectors'])) {
-    $output .= $css['prepend_selector'] ;
-    $output .= implode($glue, $css['selectors']);
-  }
-  else {
-    $output .= $css['prepend_selector'] . $css['selector'];
-  }
-  $output .= " { \n";
-  
-  // output property and values
-  foreach ($css['styles'] as $property => $value) {
-    if (!is_numeric($property)) {
-      $value =  $property . ': ' . $value;
-    }
-    $output .= '  ' . $value . ";\n";
-  }
-  $output .= "}\n\n";
-  return $output; 
 }
