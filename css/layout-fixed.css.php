@@ -20,9 +20,6 @@
 <?php
 // call the create layout for default settings
 echo zendcss_create_layout_css();
-// call for edit section
-
-echo zendcss_create_layout_css(array('width'=> '1200px'), array('prepend_selector' => '.section-node-edit'));
 
 ?>
 
