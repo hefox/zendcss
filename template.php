@@ -1,6 +1,10 @@
 <?php
 // $Id$
 
+// Include the zen specific dcss functions
+
+include_once('zen_dcss.inc');
+
 /**
  * @file
  * Contains theme override functions and preprocess functions for the theme.

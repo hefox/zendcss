@@ -27,7 +27,7 @@ base theme = zen
   ; http://drupal.org/node/171209 for more details.
 stylesheets[all][]   = css/html-reset.css
 stylesheets[all][]   = css/wireframes.css
-stylesheets[all][]   = css/layout-fixed.css
+stylesheets[all][]   = css/layout-fixed.css.php
 stylesheets[all][]   = css/page-backgrounds.css
 stylesheets[all][]   = css/tabs.css
 stylesheets[all][]   = css/messages.css
@@ -97,3 +97,8 @@ settings[zen_breadcrumb_trailing]  = 1
 settings[zen_breadcrumb_title]     = 0
 settings[zen_rebuild_registry]     = 1
 settings[zen_wireframes]           = 0
+
+  ; DCSS settings
+settings[dcss][layout-width] = 960px
+settings[dcss][layout-region-sidebar-second] = 200px
+settings[dcss][layout-region-sidebar-first] = 200px
