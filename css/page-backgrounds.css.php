@@ -30,7 +30,7 @@
         'styles' => array(),
       );
       foreach($values as $type => $color) { 
-        if ($color != '' && $color != 'none') {
+        if (!empty($color)) {
           switch($type) {
             case 'font':
               $css['styles']['color'] = $color;

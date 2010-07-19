@@ -109,26 +109,26 @@ settings[dcss][layout][second] = 200px
 settings[dcss][colors][body][background] = #FFF
 settings[dcss][colors][body][font]  = #000
 
-settings[dcss][colors][page_wrapper][background] = none
-settings[dcss][colors][page_wrapper][font] = none
+settings[dcss][colors][page_wrapper][background] = 0
+settings[dcss][colors][page_wrapper][font] = 0
 
-settings[dcss][colors][page][background] = none
-settings[dcss][colors][page][font] = none
+settings[dcss][colors][page][background] = 0
+settings[dcss][colors][page][font] = 0
 
-settings[dcss][colors][header][background] = none
-settings[dcss][colors][header][font] = none
+settings[dcss][colors][header][background] = 0
+settings[dcss][colors][header][font] = 0
 
-settings[dcss][colors][header_section][font] = none
-settings[dcss][colors][header_section][background] = none
+settings[dcss][colors][header_section][font] = 0
+settings[dcss][colors][header_section][background] = 0
 
-settings[dcss][colors][main][background] = none
-settings[dcss][colors][main][font] = none
+settings[dcss][colors][main][background] = 0
+settings[dcss][colors][main][font] = 0
 
-settings[dcss][colors][footer][background] = none
-settings[dcss][colors][footer][font] = none
+settings[dcss][colors][footer][background] = 0
+settings[dcss][colors][footer][font] = 0
 
-settings[dcss][colors][footer_section][background] = none
-settings[dcss][colors][footer_section][font] = none
+settings[dcss][colors][footer_section][background] = 0
+settings[dcss][colors][footer_section][font] = 0
 
  ; Messages
 
@@ -151,6 +151,20 @@ settings[dcss][messages][error][color] = #900
 settings[dcss][defaults][page_font] = 14px
 settings[dcss][defaults][font_family] = Verdana, Tahoma, "DejaVu Sans", sans-serif
 settings[dcss][defaults][code_font_family] = "Courier New", "DejaVu Sans Mono", monospace
+
+ ; Links
+settings[dcss][links][link][color] = 0
+settings[dcss][links][link][text_decoration] = 0
+
+settings[dcss][links][visited][color] = 0
+settings[dcss][links][visited][text_decoration] = 0
+
+settings[dcss][links][hover_focus][color] = 0
+settings[dcss][links][hover_focus][text_decoration] = 0
+
+settings[dcss][links][active][color] = 0
+settings[dcss][links][active][text_decoration] = 0
+ 
 
  ; DCSS ui settings
 settings[dcss_ui][layout][type] = group
@@ -238,3 +252,21 @@ settings[dcss_ui][defaults][below][font_family][type] = option
 settings[dcss_ui][defaults][below][font_family][option_type] = font_family
 settings[dcss_ui][defaults][below][code_font_family][type] = option
 settings[dcss_ui][defaults][below][code_font_family][option_type] = font_family
+
+settings[dcss_ui][links][type] = group
+
+settings[dcss_ui][links][below][link][type] = group
+settings[dcss_ui][links][below][link][below][color][type] = color
+settings[dcss_ui][links][below][link][below][text_decoration][type] = option
+
+settings[dcss_ui][links][below][visited][type] = group
+settings[dcss_ui][links][below][visited][below][color][type] = color
+settings[dcss_ui][links][below][visited][below][text_decoration][type] = option
+
+settings[dcss_ui][links][below][hover_focus][type] = group
+settings[dcss_ui][links][below][hover_focus][below][color][type] = color
+settings[dcss_ui][links][below][hover_focus][below][text_decoration][type] = option
+
+settings[dcss_ui][links][below][active][type] = group
+settings[dcss_ui][links][below][active][below][color][type] = color
+settings[dcss_ui][links][below][active][below][text_decoration][type] = option

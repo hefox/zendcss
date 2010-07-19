@@ -196,18 +196,27 @@ dd {
  * The order of link states are based on Eric Meyer's article:
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
-a:link {
-}
-
-a:visited {
-}
-
-a:hover,
-a:focus {
-}
-
-a:active {
-}
+<?php
+  $links = dcss('links');
+  foreach(array('link', 'visited', 'hover_focus' => array('a:hover','a:focus'), 'active') as $key => $selector) {
+    $css = array('styles' => array());
+    if (is_array($selector)) {
+      $css['selectors'] = $selector;
+    } else {
+      $css['selector'] = 'a:' . $selector;
+      $key = $selector;
+    }
+    if (!empty($links[$key]['color'])) {
+      $css['styles']['color'] = $links[$key]['color'];
+    }
+    if (!empty($links[$key]['text_decoration'])) {
+      $css['styles']['text-decoration'] = $links[$key]['text_decoration'];
+    }
+    if (!empty($css['styles'])) {
+      echo theme('dcss_css', $css);
+    }
+  }
+?>
 
 /*
  * Tables
